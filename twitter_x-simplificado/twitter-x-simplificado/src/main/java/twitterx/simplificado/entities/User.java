@@ -1,6 +1,9 @@
 package twitterx.simplificado.entities;
 
 import jakarta.persistence.*;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import twitterx.simplificado.controller.dto.LoginRequest;
+import twitterx.simplificado.controller.dto.LoginResponse;
 
 import java.util.Set;
 import java.util.UUID;
@@ -21,6 +24,15 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private Set<Role> roles;
+
+    public User() {
+
+    }
+
+    public boolean isLoginCorrect(
+            LoginRequest loginRequest, PasswordEncoder passwordEncoder){
+        return passwordEncoder.matches(loginRequest.password(), this.password);
+    }
 
     public UUID getUserId() {
         return userId;
