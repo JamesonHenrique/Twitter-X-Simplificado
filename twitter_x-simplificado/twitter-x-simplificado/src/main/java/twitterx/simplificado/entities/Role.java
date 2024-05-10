@@ -6,9 +6,9 @@ import jakarta.persistence.*;
 @Table(name = "tb_roles")
 public class Role {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long roleId;
-    private String roleName;
+    private String name;
 
     public Long getRoleId() {
         return roleId;
@@ -20,14 +20,14 @@ public class Role {
                 roleId;
     }
 
-    public String getRoleName() {
-        return roleName;
+    public String getName() {
+        return name;
     }
 
-    public void setRoleName(
-            String roleName) {
-        this.roleName =
-                roleName;
+    public void setName(
+            String name) {
+        this.name =
+                name;
     }
     public enum Values{
         ADMIN(1L),

@@ -12,6 +12,8 @@ public class Tweet {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long tweetId;
     private String content;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
     private User user;
     @CreationTimestamp
     private Instant creationTimestamp;
