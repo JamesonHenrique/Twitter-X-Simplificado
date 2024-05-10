@@ -1,4 +1,4 @@
-package twitter.xsimplificado;
+package twitterx.simplificado;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

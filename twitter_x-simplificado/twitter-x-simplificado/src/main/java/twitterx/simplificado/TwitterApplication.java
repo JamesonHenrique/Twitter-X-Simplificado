@@ -1,13 +1,14 @@
-package twitter.xsimplificado;
+package twitterx.simplificado;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class TwitterApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(
+				TwitterApplication.class, args);
 	}
 
 }
