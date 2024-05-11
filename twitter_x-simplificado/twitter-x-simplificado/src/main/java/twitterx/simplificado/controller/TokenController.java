@@ -48,8 +48,7 @@ public class TokenController {
         var scopes = user.get().getRoles()
                 .stream()
                 .map(Role::getName)
-                .collect(
-                        Collectors.joining(" "));
+                .collect(Collectors.joining(" "));
 
         var claims = JwtClaimsSet.builder()
                 .issuer("mybackend")

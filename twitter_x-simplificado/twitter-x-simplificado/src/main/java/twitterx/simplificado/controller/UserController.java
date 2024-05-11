@@ -22,10 +22,8 @@ import java.util.Set;
 @RestController
 public class UserController {
 
-    private final UserRepository
-            userRepository;
-    private final RoleRepository
-            roleRepository;
+    private final UserRepository userRepository;
+    private final RoleRepository roleRepository;
     private final BCryptPasswordEncoder passwordEncoder;
 
     public UserController(UserRepository userRepository,
@@ -40,8 +38,7 @@ public class UserController {
     @PostMapping("/users")
     public ResponseEntity<Void> newUser(@RequestBody CreateUserDto dto) {
 
-        var basicRole = roleRepository.findByName(
-                Role.Values.BASIC.name());
+        var basicRole = roleRepository.findByName(Role.Values.BASIC.name());
 
         var userFromDb = userRepository.findByUsername(dto.username());
         if (userFromDb.isPresent()) {
