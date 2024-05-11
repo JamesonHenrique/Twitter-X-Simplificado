@@ -1,6 +1,6 @@
-# 🐦 Tweet/X Simplificado
+# 🐦 Twitter/X Simplificado
 
-Tweet/X Simplificado é um projeto de microblogging desenvolvido em Java, utilizando o framework Spring Boot. Ele permite que os usuários criem, publiquem e excluam tweets, além de visualizar o feed de tweets.  
+Twitter/X Simplificado é um projeto de microblogging desenvolvido em Java, utilizando o framework Spring Boot. Ele permite que os usuários criem, publiquem e excluam tweets, além de visualizar o feed de tweets.  
 
 ## 🚀 Tecnologias Utilizadas
 
