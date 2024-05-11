@@ -50,6 +50,7 @@ public class TokenController {
   var expiresIn = 300L;
   var claims =
           JwtClaimsSet.builder()
+                  .issuer("backend")
                   .subject(user.get().getUserId().toString())
                   .subject(user.get().getUsername())
                   .expiresAt(now.plusSeconds(expiresIn))
